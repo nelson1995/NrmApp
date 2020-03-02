@@ -40,9 +40,6 @@ public class Structure extends Fragment implements AdapterView.OnItemClickListen
         View view = inflater.inflate(R.layout.fragment_structure, container, false);
         listView = view.findViewById(R.id.list);
         arrayList = new ArrayList();
-        Utils.log("VALUES->"+ getString(R.string.cec));
-        Utils.log("VALUES->"+ getString(R.string.nec));
-
         arrayList.add(new ListItems(getString(R.string.cec)));
         arrayList.add(new ListItems(getString(R.string.nec)));
         listAdapter = new ListAdapter(mContext,R.layout.fragment_structure,arrayList);
