@@ -31,5 +31,7 @@
     <string name="title_activity_nec">NecActivity</string>
     <string name="title_activity_manifesto_2020_">Manifesto_2020_Activity</string>
     <string name="title_activity_manifesto_2016_">Manifesto_2016_Activity</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="about_info">A NRM political App</string>
 
 </resources>

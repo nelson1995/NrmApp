@@ -12,9 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/HiddenTitleTheme">
         <activity
+            android:name=".AboutActivity"
+            android:label="@string/title_activity_about"
+            android:theme="@style/HiddenTitleTheme.NoActionBar"></activity>
+        <activity
             android:name=".Manifesto_2016_Activity"
             android:label="@string/title_activity_manifesto_2016_"
-            android:theme="@style/HiddenTitleTheme.NoActionBar"></activity>
+            android:theme="@style/HiddenTitleTheme.NoActionBar" />
         <activity
             android:name=".Manifesto_2020_Activity"
             android:label="@string/title_activity_manifesto_2020_"

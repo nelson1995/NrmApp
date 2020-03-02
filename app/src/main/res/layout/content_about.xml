@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".AboutActivity"
+    android:background="@color/yellow"
+    tools:showIn="@layout/activity_about"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/nrm_img"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="80dp"
+            android:src="@drawable/nrm" />
+
+        <TextView
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="normal"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/about_info"
+            />
+    </LinearLayout>
+</LinearLayout>
