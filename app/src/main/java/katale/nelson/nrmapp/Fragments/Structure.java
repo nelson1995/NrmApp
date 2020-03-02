@@ -1,6 +1,7 @@
 package katale.nelson.nrmapp.Fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -11,10 +12,13 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import java.sql.Struct;
 import java.util.ArrayList;
 
 import katale.nelson.nrmapp.Adapters.ListAdapter;
+import katale.nelson.nrmapp.CecActivity;
 import katale.nelson.nrmapp.Models.ListItems;
+import katale.nelson.nrmapp.NecActivity;
 import katale.nelson.nrmapp.R;
 import katale.nelson.nrmapp.Utils;
 
@@ -23,7 +27,7 @@ public class Structure extends Fragment implements AdapterView.OnItemClickListen
     ListAdapter listAdapter;
     ListView listView;
     ArrayList<ListItems> arrayList;
-    ArrayAdapter arrayAdapter;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,30 +66,15 @@ public class Structure extends Fragment implements AdapterView.OnItemClickListen
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
     }
 
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
         switch (position) {
             case 0:
-//                Structure.this.getActivity().getSupportFragmentManager().beginTransaction()
-//                        .remove(Structure.this)
-//                        .replace(((ViewGroup) Structure.this.getView().getParent()).getId(), new Cec(), "findThisFragment")
-//                        .addToBackStack(null)
-//                        .commit();
-                Structure.this.getActivity().getSupportFragmentManager().beginTransaction()
-                        .remove(Structure.this)
-                        .replace(view.getId(), new Cec(), "Central executive council")
-                        .addToBackStack(null)
-                        .commit();
-
+                startActivity(new Intent(getActivity(),CecActivity.class));
                 break;
             case 1:
-                Structure.this.getActivity().getSupportFragmentManager().beginTransaction()
-                        .remove(Structure.this)
-                        .replace(view.getId(), new Nec(), "National Executive Council")
-                        .addToBackStack(null)
-                        .commit();
+                startActivity(new Intent(getActivity(), NecActivity.class));
                 break;
         }
     }

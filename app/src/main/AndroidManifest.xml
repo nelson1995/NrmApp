@@ -3,6 +3,7 @@
     package="katale.nelson.nrmapp">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,6 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/HiddenTitleTheme">
+        <activity
+            android:name=".NecActivity"
+            android:label="@string/title_activity_nec"
+            android:theme="@style/HiddenTitleTheme.NoActionBar"></activity>
+        <activity
+            android:name=".CecActivity"
+            android:label="@string/title_activity_cec"
+            android:theme="@style/HiddenTitleTheme.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
