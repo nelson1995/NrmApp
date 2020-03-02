@@ -29,5 +29,7 @@
     <string name="manifesto_2016">2016</string>
     <string name="manifesto_2020">2020</string>
     <string name="title_activity_nec">NecActivity</string>
+    <string name="title_activity_manifesto_2020_">Manifesto_2020_Activity</string>
+    <string name="title_activity_manifesto_2016_">Manifesto_2016_Activity</string>
 
 </resources>

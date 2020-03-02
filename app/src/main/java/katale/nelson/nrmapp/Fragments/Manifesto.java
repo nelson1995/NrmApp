@@ -1,6 +1,7 @@
 package katale.nelson.nrmapp.Fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -14,6 +15,8 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 import katale.nelson.nrmapp.Adapters.ListAdapter;
+import katale.nelson.nrmapp.Manifesto_2016_Activity;
+import katale.nelson.nrmapp.Manifesto_2020_Activity;
 import katale.nelson.nrmapp.Models.ListItems;
 import katale.nelson.nrmapp.R;
 import katale.nelson.nrmapp.Utils;
@@ -63,7 +66,15 @@ public class Manifesto extends Fragment implements AdapterView.OnItemClickListen
 
     }
     @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+    public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+        switch (position){
+            case 0:
+                startActivity(new Intent(getActivity(), Manifesto_2020_Activity.class));
+                break;
+            case 1:
+                startActivity(new Intent(getActivity(), Manifesto_2016_Activity.class));
+                break;
 
+        }
     }
 }
